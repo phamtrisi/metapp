@@ -3,8 +3,8 @@ import json
 import argparse
 import requests
 
-from scheduler.core import db
-from scheduler.models import Post
+from metapp.core import db
+from metapp.models import Post
 
 def create_sample_db_entry(api_endpoint, payload):
 	url = 'http://localhost:5000/' + api_endpoint

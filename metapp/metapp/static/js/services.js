@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularFlaskServices', ['ngResource'])
+angular.module('metAppServices', ['ngResource'])
 	.factory('Post', function($resource) {
 		return $resource('/api/post/:postId', {}, {
 			query: {

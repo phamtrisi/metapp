@@ -1,5 +1,5 @@
 import os
-from scheduler import app
+from metapp import app
 
 def runserver():
 	port = int(os.environ.get('PORT', 5000))

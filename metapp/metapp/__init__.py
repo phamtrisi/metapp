@@ -5,11 +5,11 @@ from flask import render_template, send_from_directory, url_for
 
 app = Flask(__name__)
 
-app.config.from_object('scheduler.settings')
+app.config.from_object('metapp.settings')
 
 app.url_map.strict_slashes = False
 
-import scheduler.core
-import scheduler.models
-import scheduler.controllers
+import metapp.core
+import metapp.models
+import metapp.controllers
 

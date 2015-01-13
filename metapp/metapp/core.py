@@ -1,4 +1,4 @@
-from scheduler import app
+from metapp import app
 
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restless import APIManager

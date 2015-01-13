@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from scheduler.core import db
-from scheduler import app
+from metapp.core import db
+from metapp import app
 
 class Post(db.Model):
 	id = db.Column(db.Integer, primary_key=True)

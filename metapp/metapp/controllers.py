@@ -4,11 +4,11 @@ from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
 
-from scheduler import app
+from metapp import app
 
 # routing for API endpoints (generated from the models designated as API_MODELS)
-from scheduler.core import api_manager
-from scheduler.models import *
+from metapp.core import api_manager
+from metapp.models import *
 
 for model_name in app.config['API_MODELS']:
 	model_class = app.config['API_MODELS'][model_name]
@@ -21,7 +21,7 @@ session = api_manager.session
 @app.route('/about')
 @app.route('/blog')
 def basic_pages(**kwargs):
-	return make_response(open('scheduler/templates/index.html').read())
+	return make_response(open('metapp/templates/index.html').read())
 
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
@@ -37,7 +37,7 @@ def rest_pages(model_name, item_id=None):
 		if item_id is None or session.query(exists().where(
 			model_class.id == item_id)).scalar():
 			return make_response(open(
-				'scheduler/templates/index.html').read())
+				'metapp/templates/index.html').read())
 	abort(404)
 
 # special file handlers and error handlers
