@@ -1,0 +1,13 @@
+{
+  "name": "metapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "reset-css": "latest",
+    "angular-latest": "latest",
+    "materialize": "latest"
+  },
+  "resolutions": {
+    "jquery": ">=2.1.1"
+  }
+}
