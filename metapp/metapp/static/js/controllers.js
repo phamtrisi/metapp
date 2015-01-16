@@ -2,8 +2,10 @@
 
 /* Controllers */
 
-function IndexController($scope) {
-	
+function HomeController($scope) {
+	$scope.message = 'Hello world';
+	$scope.notifications = [
+	];
 }
 
 function AboutController($scope) {

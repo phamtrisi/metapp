@@ -5,8 +5,8 @@ angular.module('MetApp', ['metAppServices'])
 		function($routeProvider, $locationProvider) {
 		$routeProvider
 		.when('/', {
-			templateUrl: 'static/partials/landing.html',
-			controller: IndexController
+			templateUrl: 'static/partials/home.html',
+			controller: HomeController
 		})
 		.when('/about', {
 			templateUrl: 'static/partials/about.html',
